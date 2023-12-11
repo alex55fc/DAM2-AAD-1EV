@@ -1,0 +1,24 @@
+﻿@page
+@model AlexanderPaulFuelaExamen.Pages.Provincias.IndexModel
+@{
+}
+<h1>Provincias</h1>
+<h3>@Model.Provincias.Count()</h3>
+
+<div class="col-sm-8 mx-auto">
+    @await Component.InvokeAsync("Comunidad")
+</div>
+
+@foreach (var dato in Model.Provincias)
+{
+	<div class="card">
+		<div class="card-body">
+			<h5 class="card-title">@dato.nomProvincia</h5>
+			<p class="card-text">@dato.numHabitantes </p>
+			<p class="card-text">@dato.superficie </p>
+			<p class="card-text">@dato.codComunidad</p>
+		</div>
+	</div>
+}
+
+

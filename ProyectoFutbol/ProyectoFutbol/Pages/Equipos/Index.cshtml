@@ -1,0 +1,11 @@
+﻿@page
+@model ProyectoFutbol.Pages.Equipos.IndexModel
+@{
+}
+<h1>Equipos</h1>
+<!---comprobar primero si nos funciona la web-->
+<!--con este for each recorremos los equipos uno a uno y decidimos que mostrar -->
+@foreach(var equipo in Model.equipos)
+{
+	<h3>@equipo.nomEquipo</h3>
+}
